@@ -1,2 +1,3 @@
-# junjiejiao.github.io
-personal website
+# personal website
+
+built based on jemdoc _mathjax, supporting equations.
