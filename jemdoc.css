@@ -9,7 +9,8 @@ table#tlayout {
 body {
 	background: white;
 /* 	font-family: 'Arial', san-serif;*/
-	font-family: 'Trebuchet MS', san-serif;
+/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'Trebuchet MS', san-serif; 
 /* 	font-family:Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif; */
 	/* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* text fonts */
 	padding-bottom: 8px;
@@ -26,7 +27,7 @@ body {
 	font-size: 1.0em;
 	width: auto;
 	white-space: nowrap;
-    text-align: left;
+    text-align: justify;
     vertical-align: top;
 }
 
@@ -41,7 +42,7 @@ body {
 	padding-right: 1.0em;
     border: none;
     background: white;
-    text-align: left;
+    text-align: justify;
     vertical-align: top;
 }
 
@@ -368,5 +369,5 @@ img {
 
 table.imgtable, table.imgtable td {
     border: none;
-    text-align: left;
+    text-align: justify;
 }
