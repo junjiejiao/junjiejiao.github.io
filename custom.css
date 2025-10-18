@@ -145,3 +145,25 @@ hr {
   margin: 24px 0;         /* spacing above and below */
   border-radius: 2px;     /* optional: soft edges */
 }
+
+/* Remove Jemdoc's double-line underline on H1 */
+#layout-content h1,
+#toptitle h1 {
+  border: none !important;          /* kills the two thin borders */
+  padding-bottom: 0 !important;
+  margin-bottom: 12px;               /* tune spacing if you like */
+}
+
+/* Add a single, thicker line below the title */
+#toptitle {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+#toptitle::after {
+  content: "";
+  display: block;
+  height: 3px;                       /* thickness */
+  background: #0a58ca;               /* pick your color */
+  border-radius: 2px;                /* soft ends */
+}
