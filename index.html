@@ -17,40 +17,40 @@ MathJax.Hub.Config({
 </script>
 <!-- End MathJax -->
 
-<!-- ====== Icon styles ====== -->
+<!-- ===== Social link styles ===== -->
 <style>
-.icon-link {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  vertical-align: middle;
-  margin-right: 6px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.8;
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 14px;
+  color: #333;
   transition: opacity 0.2s ease;
 }
-.icon-link:hover { opacity: 1; }
+.social-link:hover { opacity: 0.7; }
 
-/* LinkedIn */
-.icon-link.linkedin {
-  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg');
-  filter: invert(33%) sepia(99%) saturate(676%) hue-rotate(176deg) brightness(96%) contrast(95%);
+.social-link img {
+  height: 18px;
+  width: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+  filter: grayscale(100%) brightness(0.2);
 }
 
-/* Google Scholar */
-.icon-link.scholar {
-  background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg');
-  filter: invert(36%) sepia(89%) saturate(340%) hue-rotate(200deg) brightness(93%) contrast(95%);
+/* Strava icon */
+.strava-badge-follow {
+  height: 18px;
+  width: 18px;
+  background: url(//badges.strava.com/echelon-sprite-32.png) no-repeat 0 0;
+  background-size: 18px 36px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
 }
-
-/* Strava (your existing badge style) */
-.strava-badge- { display: inline-block; height: 28px; width: 28px; vertical-align: middle; }
-.strava-badge- img { visibility: hidden; height: 28px; }
-.strava-badge-:hover { background-position: 0 -47px; }
-.strava-badge-follow { height: 28px; width: 28px; background: url(//badges.strava.com/echelon-sprite-32.png) no-repeat 0 0; }
+.strava-badge-follow:hover { background-position: 0 -18px; }
 </style>
-<!-- ====== End icon styles ====== -->
+<!-- ===== End styles ===== -->
 </head>
 
 <body>
@@ -62,21 +62,36 @@ MathJax.Hub.Config({
 
 <table class="imgtable"><tr><td>
 <a href="https://junjiejiao.github.io/">
-  <img src="jiao2023a.jpg" alt="alt text" height="250px" />
+  <img src="jiao2023a.jpg" alt="Junjie Jiao photo" height="250px" />
 </a>&nbsp;
-</td><td align="left">
+</td>
+<td align="left">
 <p><br />
 <b>Design Engineer</b><br /><br />
 ASML<br />
 The Netherlands<br /><br /><br />
 
-Email: <tt>junjie.jiao(at)outlook.com</tt> <br /><br />
+Email: <tt>junjie.jiao(at)outlook.com</tt><br /><br />
 
-<!-- === Icon links === -->
-<a href="https://scholar.google.nl/citations?user=G7ok8mYAAAAJ&hl=en" target="_blank" class="icon-link scholar" title="Google Scholar"></a>
-<a href="https://www.linkedin.com/in/junjiejiao/" target="_blank" class="icon-link linkedin" title="LinkedIn"></a>
-<a href="https://strava.com/athletes/11775168" class="strava-badge- strava-badge-follow" target="_blank" title="Strava">
-  <img src="//badges.strava.com/echelon-sprite-32.png" alt="Strava" />
+<!-- === Social links === -->
+<a href="https://scholar.google.nl/citations?user=G7ok8mYAAAAJ&amp;hl=en"
+   target="_blank" class="social-link">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg"
+       alt="Google Scholar icon" />
+  Google Scholar
+</a>
+
+<a href="https://www.linkedin.com/in/junjiejiao/"
+   target="_blank" class="social-link">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+       alt="LinkedIn icon" />
+  LinkedIn
+</a>
+
+<a href="https://strava.com/athletes/11775168"
+   target="_blank" class="social-link">
+  <span class="strava-badge-follow"></span>
+  Strava
 </a>
 
 </p>
@@ -88,9 +103,10 @@ I am currently a Design Engineer (on product alignment) at ASML, The Netherlands
 Before this, I was a Marie Curie Postdoctoral Fellow at the Chair of Information-Oriented Control (ITR),
 <a href="https://www.tum.de/en/" target="_blank">Technical University of Munich (TUM)</a>, Germany.
 From 2020 to 2022, I was a Postdoctoral researcher at the same Chair. 
-In 2020, I obtained my Ph.D. degree in Applied Mathematics (Systems and Control) 
+In 2020, I obtained my Ph.D. degree in Applied Mathematics (Systems and Control)
 from the <a href="https://www.rug.nl/" target="_blank">University of Groningen</a>, The Netherlands.
 </p>
+
 </div>
 </body>
 </html>
