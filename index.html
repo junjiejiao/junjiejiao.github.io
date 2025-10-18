@@ -108,3 +108,94 @@
     border-radius: 10px;
   }
   .social-link:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+  }
+  .social-link img {
+    width: 20px; height: 20px;
+    display: inline-block;
+  }
+
+  /* Brand coloring via CSS filters on monochrome SVGs */
+  .icon-scholar { filter: invert(35%) sepia(67%) saturate(315%) hue-rotate(197deg) brightness(92%) contrast(94%); }
+  .icon-linkedin { filter: invert(41%) sepia(100%) saturate(2752%) hue-rotate(186deg) brightness(93%) contrast(95%); }
+  .icon-strava { filter: invert(53%) sepia(85%) saturate(2225%) hue-rotate(344deg) brightness(97%) contrast(95%); }
+
+  /* ---- Responsive stacking on small screens ---- */
+  @media (max-width: 720px) {
+    .imgtable tr, .imgtable td { display: block; width: 100%; }
+    .profile-photo { margin-bottom: 14px; }
+    .profile-right { padding-left: 0 !important; }
+    #layout-content { padding: 20px 14px; }
+  }
+
+  /* Optional: “card” feel under the header block */
+  .profile-card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 16px;
+  }
+</style>
+</head>
+
+<body>
+<div id="layout-content">
+  <div id="toptitle">
+    <h1>Junjie Jiao</h1>
+    <div id="subtitle"></div>
+  </div>
+
+  <div class="profile-card">
+    <table class="imgtable" role="presentation">
+      <tr>
+        <td class="profile-photo" style="width: 260px;">
+          <a href="https://junjiejiao.github.io/">
+            <!-- 5) Make images responsive & lazy for mobile perf -->
+            <img src="jiao2023a.jpg" alt="Portrait of Junjie Jiao" height="250" loading="lazy" />
+          </a>
+        </td>
+        <td class="profile-right" style="padding-left: 18px;">
+          <p><b>Design Engineer</b></p>
+          <p>ASML<br/>The Netherlands</p>
+          <p style="margin-top: 12px;">Email: <tt>junjie.jiao(at)outlook.com</tt></p>
+
+          <!-- Social links: icon + text -->
+          <div class="socials" aria-label="Social links">
+            <a class="social-link" href="https://scholar.google.nl/citations?user=G7ok8mYAAAAJ&amp;hl=en"
+               target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg"
+                   alt="" class="icon-scholar" />
+              Google Scholar
+            </a>
+
+            <a class="social-link" href="https://www.linkedin.com/in/junjiejiao/"
+               target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                   alt="" class="icon-linkedin" />
+              LinkedIn
+            </a>
+
+            <a class="social-link" href="https://strava.com/athletes/11775168"
+               target="_blank" rel="noopener noreferrer" aria-label="Strava">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/strava.svg"
+                   alt="" class="icon-strava" />
+              Strava
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 style="margin-top: 24px;">Short Bio</h2>
+  <p>
+    I am currently a Design Engineer (on product alignment) at ASML, The Netherlands.
+    Before this, I was a Marie Curie Postdoctoral Fellow at the Chair of Information-Oriented Control (ITR),
+    <a href="https://www.tum.de/en/" target="_blank" rel="noopener noreferrer">Technical University of Munich (TUM)</a>, Germany.
+    From 2020 to 2022, I was a Postdoctoral researcher at the same Chair. In 2020, I obtained my Ph.D. degree
+    in Applied Mathematics (Systems and Control) from the
+    <a href="https://www.rug.nl/" target="_blank" rel="noopener noreferrer">University of Groningen</a>, The Netherlands.
+  </p>
+</div>
+</body>
+</html>
