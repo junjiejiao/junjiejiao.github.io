@@ -13,15 +13,16 @@
 
 <!-- Load jemdoc base first, then your site CSS -->
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<link rel="stylesheet" href="custom.css?v=6" type="text/css" />
+<link rel="stylesheet" href="custom.css?v=8" type="text/css" />
 
 <!-- Page-specific enhancements / overrides -->
 <style>
   :root{
     --text:#222; --muted:#555; --link:#0a58ca; --bg:#fff; --card:#fafafa;
+    --rule:#cccccc; /* unified line color for title, h2, hr */
   }
   @media (prefers-color-scheme: dark){
-    :root{ --text:#eaeaea; --muted:#c7c7c7; --link:#66aaff; --bg:#0f1115; --card:#171a21; }
+    :root{ --text:#eaeaea; --muted:#c7c7c7; --link:#66aaff; --bg:#0f1115; --card:#171a21; --rule:#666; }
   }
 
   html,body{
@@ -34,18 +35,35 @@
 
   #layout-content{ max-width:980px; margin:0 auto; padding:24px 16px; }
 
-  /* Kill Jemdoc's double underline on H1 and add a single thick rule */
+  /* Remove Jemdoc's borders and add ONE grey rule under main title */
   #layout-content h1, #toptitle h1{
     border:none !important; padding-bottom:0 !important; margin-bottom:12px;
     font-size:clamp(28px,4vw,40px); line-height:1.2;
   }
-  #toptitle{ position:relative; padding-bottom:10px; margin-bottom:14px; }
+  #toptitle{
+    position:relative; padding-bottom:10px; margin-bottom:14px; border:none !important;
+  }
   #toptitle::after{
-    content:""; display:block; height:3px; background:#0a58ca; border-radius:2px;
+    content:""; display:block;
+    height:2px !important;          /* same as h2 */
+    background:var(--rule) !important;
+    border-radius:2px; margin-top:4px;
   }
 
-  /* (Optional) single-line <hr> style anywhere else */
-  hr{ border:none !important; height:3px !important; background:#0a58ca !important; margin:24px 0 !important; border-radius:2px !important; }
+  /* Make section headers (like "Short Bio") use the same grey line */
+  #layout-content h2, h2{
+    border-top:none !important;
+    border-bottom:2px solid var(--rule) !important;
+  }
+
+  /* Optional: single-line <hr> style using the same grey */
+  hr{
+    border:none !important;
+    height:2px !important;
+    background:var(--rule) !important;
+    margin:24px 0 !important;
+    border-radius:2px !important;
+  }
 
   /* Header block layout */
   .profile-card{ background:var(--card); border-radius:16px; padding:16px; }
@@ -101,13 +119,11 @@
               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="" class="icon-scholar" />
               Google Scholar
             </a>
-
             <a class="social-link" href="https://www.linkedin.com/in/junjiejiao/"
                target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" class="icon-linkedin" />
               LinkedIn
             </a>
-
             <a class="social-link" href="https://strava.com/athletes/11775168"
                target="_blank" rel="noopener noreferrer" aria-label="Strava">
               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/strava.svg" alt="" class="icon-strava" />
@@ -131,4 +147,3 @@
 </div>
 </body>
 </html>
-
