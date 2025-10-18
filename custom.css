@@ -100,7 +100,7 @@ hr {
   border-collapse: collapse;
 }
 .imgtable td {
-  vertical-align: top;
+  vertical-align: middle;
   padding: 0;
 }
 .imgtable img {
