@@ -193,3 +193,10 @@ hr {
   border: none !important;
 }
 
+
+
+/* ---- Make section headers (like "Short Bio") use same grey underline ---- */
+h2 {
+  border-color: #cccccc !important;
+}
+
