@@ -136,3 +136,12 @@ a:hover, a:focus {
   .profile-right { padding-left: 0 !important; }
   #layout-content { padding: 20px 14px; }
 }
+
+/* ----- Modern horizontal line style ----- */
+hr {
+  border: none;
+  height: 3px;            /* thickness */
+  background-color: #0a58ca;  /* pick any color (e.g. ASML blue or gray) */
+  margin: 24px 0;         /* spacing above and below */
+  border-radius: 2px;     /* optional: soft edges */
+}
